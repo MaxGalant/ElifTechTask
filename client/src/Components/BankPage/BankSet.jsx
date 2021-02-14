@@ -17,7 +17,7 @@ const BankSet = (props) => {
             setBanks(Response.data);
             setMessage("");
           } else {
-            setBanks("Err");
+            setMessage("Error, something went wrong");
           }
         } else {
           setMessage("Error, something went wrong");

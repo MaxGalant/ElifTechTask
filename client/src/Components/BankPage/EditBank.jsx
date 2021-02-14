@@ -8,7 +8,7 @@ const EditBank = (props) => {
   const [dataBank, setData] = useState([]);
   const [message, setMessage] = useState("");
   useEffect(() => {
-    Axios.get("http://localhost:3001/bank").then(
+    Axios.get("https://elif-tech-task.herokuapp.com/bank").then(
       (Response) => {
         if (Response.status === 200) {
           setBanks(Response.data);
@@ -33,7 +33,7 @@ const EditBank = (props) => {
       let strBank = selectBank.value.substring(3);
       let arrBank = strBank.split(" ");
       let editData = document.getElementById("EditData");
-      Axios.get("http://localhost:3001/bank/" + arrBank[0]).then(
+      Axios.get("https://elif-tech-task.herokuapp.com/bank/" + arrBank[0]).then(
         (Response) => {
           if (Response.status === 200) {
             setData(Response.data);

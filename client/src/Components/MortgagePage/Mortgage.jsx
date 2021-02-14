@@ -15,7 +15,7 @@ const Mortgage = (props) => {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/bank").then((Response) => {
+    Axios.get("https://elif-tech-task.herokuapp.com/bank").then((Response) => {
       setBanks(Response.data);
     });
   }, []);

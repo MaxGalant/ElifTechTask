@@ -8,7 +8,7 @@ const DeleteBank = (props) => {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
   useEffect(() => {
-    Axios.get("http://localhost:3001/bank").then(
+    Axios.get("https://elif-tech-task.herokuapp.com/bank").then(
       (Response) => {
         if (Response.status === 200) {
           setBanks(Response.data);
@@ -40,7 +40,7 @@ const DeleteBank = (props) => {
     let arrBank = strBank.split(" ");
     if (selectBank !== "None") {
       Axios.delete(
-        "http://localhost:3001/delete/bank/" + arrBank[0] + "/" + arrBank[1]
+        "https://elif-tech-task.herokuapp.com/delete/bank/" + arrBank[0] + "/" + arrBank[1]
       ).then(
         (Response) => {
           setMessage("");

@@ -19,7 +19,7 @@ const EditData = (props) => {
     let inputValue = e.target.parentElement.children[0].value;
 
     if (inputValue.length > 0) {
-      Axios.put("http://localhost:3001/update/name/" + props.Id, {
+      Axios.put("https://elif-tech-task.herokuapp.com/update/name/" + props.Id, {
         name: inputValue,
       }).then(
         (Response) => {
@@ -84,7 +84,7 @@ const EditData = (props) => {
     let inputValue = Number(e.target.parentElement.children[0].value);
     if (!isNaN(inputValue)) {
       if (inputValue > 0) {
-        Axios.put("http://localhost:3001/update/max_loan/" + props.Id, {
+        Axios.put("https://elif-tech-task.herokuapp.com/update/max_loan/" + props.Id, {
           max_loan: inputValue,
         }).then(
           (Response) => {
@@ -117,7 +117,7 @@ const EditData = (props) => {
     if (!isNaN(inputValue)) {
       if (inputValue > 0) {
         if (inputValue < 100) {
-          Axios.put("http://localhost:3001/update/min_loan/" + props.Id, {
+          Axios.put("https://elif-tech-task.herokuapp.com/update/min_loan/" + props.Id, {
             min_loan: inputValue,
           }).then(
             (Response) => {
@@ -154,7 +154,7 @@ const EditData = (props) => {
     if (!isNaN(inputValue)) {
       if (inputValue > 0) {
         if (inputValue < 240) {
-          Axios.put("http://localhost:3001/update/loan_term/" + props.Id, {
+          Axios.put("https://elif-tech-task.herokuapp.com/update/loan_term/" + props.Id, {
             loan_term: inputValue,
           }).then(
             (Response) => {

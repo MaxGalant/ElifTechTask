@@ -76,7 +76,7 @@ const CreateBank = (props) => {
                       if (!isNaN(loan_term)) {
                         if (loan_term > 0) {
                           if (loan_term < 240) {
-                            Axios.post("http://localhost:3001/create_bank", {
+                            Axios.post("https://elif-tech-task.herokuapp.com/create_bank", {
                               name: name,
                               interest_rate: interest_rate,
                               max_loan: max_loan,
